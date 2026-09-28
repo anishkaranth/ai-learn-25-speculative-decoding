@@ -1,0 +1,48 @@
+{
+ "project": "ai-learn-25-speculative-decoding",
+ "seed": 42,
+ "config": {
+  "corpus_repeats": 40,
+  "draft_order": 2,
+  "target_order": 3,
+  "draft_cost": 1.0,
+  "target_cost": 8.0,
+  "alpha": 0.5,
+  "n_prompts": 24,
+  "n_tokens": 32,
+  "prompt_len": 8,
+  "gammas": [1, 2, 3, 4, 5, 6, 8],
+  "draft_mixes": [1.0, 0.75, 0.5, 0.25, 0.0],
+  "gamma_quality": 4,
+  "V": 21,
+  "corpus_chars": 27839,
+  "train_chars": 25055,
+  "held_chars": 2784
+ },
+ "model_info": {
+  "draft_order": 2,
+  "target_order": 3,
+  "draft_cost": 1.0,
+  "target_cost": 8.0,
+  "vocab": [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "m", "n", "o", "r", "s", "t", "u", "w", "x", "y"],
+  "V": 21
+ },
+ "gamma_sweep": [
+  {"gamma": 1, "mean_acceptance_rate": 0.5656, "mean_accepted_per_step": 0.5656, "mean_emitted_per_step": 1.5656, "speedup_vs_vanilla": 1.3653, "exact_match_rate": 0.0, "flops": 4500.0},
+  {"gamma": 2, "mean_acceptance_rate": 0.491, "mean_accepted_per_step": 0.9819, "mean_emitted_per_step": 1.9819, "speedup_vs_vanilla": 1.5059, "exact_match_rate": 0.0, "flops": 4080.0},
+  {"gamma": 3, "mean_acceptance_rate": 0.4122, "mean_accepted_per_step": 1.2365, "mean_emitted_per_step": 2.2365, "speedup_vs_vanilla": 1.5219, "exact_match_rate": 0.0, "flops": 4037.0},
+  {"gamma": 4, "mean_acceptance_rate": 0.3738, "mean_accepted_per_step": 1.4952, "mean_emitted_per_step": 2.4952, "speedup_vs_vanilla": 1.5468, "exact_match_rate": 0.0, "flops": 3972.0},
+  {"gamma": 5, "mean_acceptance_rate": 0.3094, "mean_accepted_per_step": 1.547, "mean_emitted_per_step": 2.547, "speedup_vs_vanilla": 1.4542, "exact_match_rate": 0.0, "flops": 4225.0},
+  {"gamma": 6, "mean_acceptance_rate": 0.2601, "mean_accepted_per_step": 1.5607, "mean_emitted_per_step": 2.5607, "speedup_vs_vanilla": 1.338, "exact_match_rate": 0.0, "flops": 4592.0},
+  {"gamma": 8, "mean_acceptance_rate": 0.2614, "mean_accepted_per_step": 2.0911, "mean_emitted_per_step": 3.0911, "speedup_vs_vanilla": 1.338, "exact_match_rate": 0.0, "flops": 4592.0}
+ ],
+ "draft_quality_sweep": [
+  {"draft_mix": 1.0, "mean_tv": 0.3128, "mean_kl_target_draft": 0.4735, "mean_acceptance_rate": 0.3691, "speedup_vs_vanilla": 1.5468, "exact_match_rate": 0.0, "flops": 3972.0},
+  {"draft_mix": 0.75, "mean_tv": 0.2346, "mean_kl_target_draft": 0.2891, "mean_acceptance_rate": 0.4796, "speedup_vs_vanilla": 1.8221, "exact_match_rate": 0.0, "flops": 3372.0},
+  {"draft_mix": 0.5, "mean_tv": 0.1564, "mean_kl_target_draft": 0.1661, "mean_acceptance_rate": 0.5716, "speedup_vs_vanilla": 2.0562, "exact_match_rate": 0.0, "flops": 2988.0},
+  {"draft_mix": 0.25, "mean_tv": 0.0782, "mean_kl_target_draft": 0.0715, "mean_acceptance_rate": 0.8453, "speedup_vs_vanilla": 2.7234, "exact_match_rate": 0.0, "flops": 2256.0},
+  {"draft_mix": 0.0, "mean_tv": 0.0, "mean_kl_target_draft": -0.0, "mean_acceptance_rate": 1.0, "speedup_vs_vanilla": 3.0476, "exact_match_rate": 0.0, "flops": 2016.0}
+ ],
+ "headline": {"draft_ppl": 2.9056, "target_ppl": 1.7026, "vanilla_flops": 6144.0, "best_gamma": 4, "best_speedup": 1.5468, "best_acceptance": 0.3738, "best_emitted_per_step": 2.4952, "gamma4_acceptance": 0.3738, "gamma4_speedup": 1.5468, "perfect_draft_acceptance": 1.0, "perfect_draft_speedup": 3.0476, "perfect_draft_tv": 0.0},
+ "wall_time_s": 0.28
+}
