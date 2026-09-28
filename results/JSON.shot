@@ -1,0 +1,18 @@
+{
+  "project": "ai-learn-25-speculative-decoding",
+  "seed": 42,
+  "config": {
+    "draft_order": 2,
+    "target_order": 3,
+    "draft_cost": 1.0,
+    "target_cost": 8.0,
+    "n_prompts": 24,
+    "n_tokens": 32,
+    "gammas": [1, 2, 3, 4, 5, 6, 8],
+    "draft_mixes": [1.0, 0.75, 0.5, 0.25, 0.0],
+    "gamma_quality": 4,
+    "V": 21
+  },
+  "headline": {"draft_ppl": 2.9056, "target_ppl": 1.7026, "vanilla_flops": 6144.0, "best_gamma": 4, "best_speedup": 1.5468, "best_acceptance": 0.3738, "best_emitted_per_step": 2.4952, "gamma4_acceptance": 0.3738, "gamma4_speedup": 1.5468, "perfect_draft_acceptance": 1.0, "perfect_draft_speedup": 3.0476, "perfect_draft_tv": 0.0},
+  "wall_time_s": 0.29
+}
